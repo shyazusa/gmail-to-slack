@@ -1,8 +1,9 @@
 function myFunction() {
   var body, channel, messages, threads, url;
+
   channel = '#general' // your slack channel
   url = 'https://hooks.slack.com/services/hoge/piyo'; // your slack incoming webhook url
-  
+
   threads = GmailApp.search('is:unread');
   threads.map(function(t) {
     messages = t.getMessages();
