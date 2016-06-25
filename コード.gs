@@ -1,5 +1,5 @@
 function myFunction() {
-  var body, threads, messages;
+  var body, messages, threads;
   threads = GmailApp.search('is:unread');
   threads.map(function(t) {
     messages = t.getMessages();
@@ -11,15 +11,16 @@ function myFunction() {
   });
 
   function slack(message) {
-    var mes = message;
-    var url = 'https://hooks.slack.com/services/hoge/piyo'; // your slack incoming webhook url
-    var payload = {
+    var mes, params, payload, response, url;
+    mes = message;
+    url = 'https://hooks.slack.com/services/hoge/piyo'; // your slack incoming webhook url
+    payload = {
         'text' : mes,
         'channel' : '#mail',
     };
-    var params = {
+    params = {
         'payload' : JSON.stringify(payload)
     };
-    var response = UrlFetchApp.fetch(url, params);
+    response = UrlFetchApp.fetch(url, params);
   }
 }
