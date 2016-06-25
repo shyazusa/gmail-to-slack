@@ -27,4 +27,9 @@ Gmailの未読メールの本文をSlackに通知して既読処理してくれ�
 +         'text' : '<@shy_azusa>: ' + mes,
 ```
 
-4. Google Apps Scriptで定期実行を設定する
+4. Googleスプレッドシートを新規作成
+5. ツール → スクリプトエディタ
+6. コード記述欄に出来上がった`コード.gs`をペースト，保存
+7. Google Apps Scriptで定期実行を設定
+
+以上デス．
