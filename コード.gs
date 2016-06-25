@@ -15,7 +15,7 @@ function myFunction() {
   });
 
   function slack(message, channel, url) {
-    var mes, params, payload, response;
+    var params, payload, response;
     payload = {
       'text' : message,
       // @ is ↓ change your slack account, remove comment out, and ↑ comment out
