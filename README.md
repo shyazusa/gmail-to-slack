@@ -20,11 +20,11 @@ Gmailの未読メールの本文をSlackに通知して既読処理してくれ�
   `@shy_azusa`のところも，通知したい人のslack nameに変更してね．
 
   ```diff
--         'text' : mes,
-+         // 'text' : mes,
-              // @ is ↓ change your slack account, remove comment out, and ↑ comment out
--         // 'text' : '<@shy_azusa>: ' + mes,
-+         'text' : '<@shy_azusa>: ' + mes,
+-       'text' : mes,
++       // 'text' : mes,
+            // @ is ↓ change your slack account, remove comment out, and ↑ comment out
+-       // 'text' : '<@shy_azusa>: ' + mes,
++       'text' : '<@shy_azusa>: ' + mes,
 ```
 
 4. Googleスプレッドシートを新規作成
