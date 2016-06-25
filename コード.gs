@@ -1,7 +1,6 @@
 function myFunction() {
-  var body, count, threads, messages;
+  var body, threads, messages;
   threads = GmailApp.search('is:unread');
-  count = threads.length;
   threads.map(function(t) {
     messages = t.getMessages();
     messages.forEach(function(message){
