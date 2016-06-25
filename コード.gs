@@ -13,7 +13,7 @@ function myFunction() {
 
   function slack(message) {
     var mes = message;
-    var url = ''; // your slack incoming webhook url
+    var url = 'https://hooks.slack.com/services/hoge/piyo'; // your slack incoming webhook url
     var payload = {
         'text' : mes,
         'channel' : '#mail',
