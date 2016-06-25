@@ -16,15 +16,14 @@ function myFunction() {
 
   function slack(message, channel, url) {
     var mes, params, payload, response;
-    mes = message;
     payload = {
-        'text' : mes,
-        // @ is ↓ change your slack account, remove comment out, and ↑ comment out
-        // 'text' : '<@shy_azusa>: ' + mes,
-        'channel' : channel,
+      'text' : message,
+      // @ is ↓ change your slack account, remove comment out, and ↑ comment out
+      // 'text' : '<@shy_azusa>: ' + mes,
+      'channel' : channel,
     };
     params = {
-        'payload' : JSON.stringify(payload)
+      'payload' : JSON.stringify(payload)
     };
     response = UrlFetchApp.fetch(url, params);
   }
