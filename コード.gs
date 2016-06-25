@@ -19,6 +19,8 @@ function myFunction() {
     mes = message;
     payload = {
         'text' : mes,
+        // @ is ↓ change your slack account, remove comment out, and ↑ comment out
+        // 'text' : '<@shy_azusa>: ' + mes,
         'channel' : channel,
     };
     params = {
