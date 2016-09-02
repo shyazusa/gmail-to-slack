@@ -8,10 +8,12 @@ function myFunction() {
   threads.map(function(t) {
     messages = t.getMessages();
     messages.forEach(function(message){
-      body = message.getBody().replace(/<br[^>]*>/g, '\n').replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'').replace(/\s\s/g, ' ');
-      slack(body, channel, url);
-      message.markRead();
-    });
+      if (message.isUnread()) {
+       body = message.getBody().replace(/<br[^>]*>/g, '\n').replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'').replace(/\s\s/g, ' ');
+       slack(body, channel, url);
+       message.markRead();
+     }
+});
   });
 
   function slack(message, channel, url) {
