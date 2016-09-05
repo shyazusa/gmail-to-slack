@@ -9,7 +9,7 @@ function myFunction() {
     messages = t.getMessages();
     messages.forEach(function(message){
       if (message.isUnread()) {
-       body = message.getBody().replace(/<br[^>]*>/g, '\n').replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'').replace(/\s\s/g, ' ');
+       body = message.getBody().replace(/<br[^>]*>/g, '\n').replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'').replace(/\s{2,}/g, '\n');
        slack(body, channel, url);
        message.markRead();
      }
