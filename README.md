@@ -1,12 +1,12 @@
 # [Gmail-to-slack](https://shyazusa.github.io/gmail-to-slack/)
 
-Gmailの未読メールの本文をSlackに通知して既読処理してくれるGoogle Apps Scriptです．  
+Gmailの未読メールの本文をSlackに通知して既読処理してくれるGoogle Apps Scriptです。
 
 ## 使用手順
 
 1. Slackのincoming webhookをオンにして，URLコピるなりしてメモる
 2. `コード.gs`内でchannel,urlの設定をする  
-  `#general`に流れてくれれば良いのであれば設定変える必要はないけれど，自分は`#mail`というチャンネルに流したかったので以下のように設定．
+  `#general`に流れてくれれば良いのであれば設定変える必要はないけれど，自分は`#mail`というチャンネルに流したかったので以下のように設定。
 
   ```diff
 -   channel = '#general' // your slack channel
@@ -16,8 +16,8 @@ Gmailの未読メールの本文をSlackに通知して既読処理してくれ�
 ```
 
 3. もしも自分に@したい場合は`slack()`内も変更を加える  
-  `'text' : message,`をコメントアウトして，`// 'text' : '<@shy_azusa>: ' + message,`のコメントアウトを解除する．  
-  `@shy_azusa`のところも，通知したい人のslack nameに変更してね．
+  `'text' : message,`をコメントアウトして，`// 'text' : '<@shy_azusa>: ' + message,`のコメントアウトを解除する。  
+  `@shy_azusa`のところも，通知したい人のslack nameに変更してね。
 
   ```diff
 -       'text' : message,
@@ -31,5 +31,6 @@ Gmailの未読メールの本文をSlackに通知して既読処理してくれ�
 5. ツール → スクリプトエディタ
 6. コード記述欄に出来上がった`コード.gs`をペースト，保存
 7. Google Apps Scriptで定期実行を設定
+    ![image](https://user-images.githubusercontent.com/10899437/34185722-5d8e062a-e56a-11e7-9f49-4a630a29b6aa.png)
 
-以上デス．
+以上デス。
