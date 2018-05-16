@@ -1,6 +1,7 @@
 # [Gmail-to-slack](https://shyazusa.github.io/gmail-to-slack/)
 
-Gmailの未読メールの本文をSlackに通知して既読処理してくれるGoogle Apps Scriptです。
+Gmailの未読メールの本文をSlackに通知して既読処理してくれるGoogle Apps Scriptです。  
+chatworkに飛ばしたい方はコチラ! [shyazusa/gmail-to-chatwork](https://github.com/shyazusa/gmail-to-chatwork)
 
 ## 使用手順
 
