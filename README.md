@@ -5,7 +5,7 @@ Gmailの未読メールの本文をSlackに通知して既読処理してくれ�
 ## 使用手順
 
 1. Slackのincoming webhookをオンにして，URLコピるなりしてメモる
-2. `コード.gs`内でchannel,urlの設定をする  
+2. `code.gs`内でchannel,urlの設定をする  
   `#general`に流れてくれれば良いのであれば設定変える必要はないけれど，自分は`#mail`というチャンネルに流したかったので以下のように設定。
 
   ```diff
@@ -29,7 +29,7 @@ Gmailの未読メールの本文をSlackに通知して既読処理してくれ�
 
 4. Googleスプレッドシートを新規作成
 5. ツール → スクリプトエディタ
-6. コード記述欄に出来上がった`コード.gs`をペースト，保存
+6. コード記述欄に出来上がった`code.gs`をペースト，保存
 7. Google Apps Scriptで定期実行を設定
     ![image](https://user-images.githubusercontent.com/10899437/34185722-5d8e062a-e56a-11e7-9f49-4a630a29b6aa.png)
 
